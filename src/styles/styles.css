@@ -1,0 +1,42 @@
+
+.container{
+    max-width: 1250px;
+    width: 90%;
+    margin: auto;
+}
+.container-2{
+    max-width: 1140px;
+    width: 90%;
+    margin: auto;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+.bg-black-light{
+    background-color: rgba(0, 0, 0, 0.44);
+}
+

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría en Tesis</title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06610a6ec1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Top Bar  -->
+        <section class="bg-black">
+            <div class="container flex item-center gap-[27px] text-white justify-end">
+               <div class="py-2 flex item-center gap-4">
+                   <div class="flex item-center gap-4">
+                       <a href="#" class="flex gap-2 text-[15px]">
+                          <i data-lucide="phone" class="w-[18px] h-[18px]"></i>
+                           996838533
+                       </a>
+                       <span class="flex item-center gap-2 text-[15px]">
+                           <i data-lucide="mail" class="w-[18px] h-[18px]"></i>
+                           informes@asesoriaentesis.edu.pe
+                       </span>
+                   </div>
+                   <div class="flex gap-2 ">
+                       <a href="#">
+                           <i class="fa-brands fa-facebook-f"></i>
+                       </a>
+                       <a href="#">
+                           <i class="fa-brands fa-youtube"></i>
+                       </a>
+                   </div>
+               </div>
+                <div class="bg-[#F6520A] px-[18px] py-[10px]">
+                    <span class="uppercase">ruc: 20606452153</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Header -->
+        <section class="container py-[32px] flex justify-between item-center">
+            <div class="text-[30px]">TESIS</div>
+            <nav class="flex item-center text-[14px] uppercase">
+                <a href="index.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white">Inicio</a>
+                <a href="nosotros.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white">Sobre Nosotros</a>
+                <div class="relative">
+                    <a href="#" class="dropdown-action py-4 px-6 hover:bg-[#F6520A] hover:text-white flex item-center gap-6">
+                        Servicios
+                        <i data-lucide="chevron-down"></i>
+                    </a>
+                    <div class="z-50 dropdown-menu hidden absolute flex flex-col bg-gray-700 text-white w-full">
+                        <a href="pregrado.html" class="py-4 px-6 ">Tesis Pregrado</a>
+                        <a href="maestria.html" class="py-4 px-6 ">Tesis Maestría</a>
+                        <a href="doctoral.html" class="py-4 px-6 ">Tesis Doctoral</a>
+                    </div>
+                </div>
+                <a href="articulos.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white">Artículos Científicos</a>
+                <a href="contacto.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white">Contacto</a>
+            </nav>
+            <button class="uppercase bg-black py-[9px] px-[15px] text-[14px] rounded-full font-bold cursor-pointer hover:bg-[#F6520A] text-white">Centro de Investigación IDEOs</button>
+        </section>
+
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden md:h-[600px]">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="absolute top-[30%] left-[15%] z-30 bg-white py-[50px] px-[40px] ">
+                            <i data-lucide="graduation-cap" class="text-blue-600 w-[40px] h-[40px] mb-5"></i>
+                            <h2 class="text-[26px] text-[#111111] font-semibold mb-3">Asesoría en tesis</h2>
+                            <p class="text-[16px] text-[#767676] font-normal max-w-[250px]">Somos un Centro de Investigación
+                                & Publicación Científica IDEOs</p>
+                        </div>
+                        <div class="bg-black-light absolute w-full h-full z-29">
+                        </div>
+                        <img src="src/img/graduacion.webp" class=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <div class="absolute top-[30%] left-[15%] z-30 bg-white py-[50px] px-[40px] ">
+                            <i data-lucide="hand-platter" class="text-blue-600 w-[40px] h-[40px] mb-5"></i>
+                            <h2 class="text-[26px] text-[#111111] font-semibold mb-3">Servicios</h2>
+                            <p class="text-[16px] text-[#767676] font-normal max-w-[250px]">Asesoramos en TESIS de PreGrado, Maestría, Doctorado. Publicamos Artículos Científicos en Revistas Indexadas</p>
+                        </div>
+                        <div class="bg-black-light absolute w-full h-full z-29">
+                        </div>
+                        <img src="src/img/docentes.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="absolute top-[30%] left-[15%] z-30 bg-white py-[50px] px-[40px] ">
+                            <i data-lucide="hard-drive" class="text-blue-600 w-[40px] h-[40px] mb-5"></i>
+                            <h2 class="text-[26px] text-[#111111] font-semibold mb-3 max-w-[250px]">Reducción de similitud - turnitin</h2>
+                        </div>
+                        <div class="bg-black-light absolute w-full h-full z-29">
+                        </div>
+                        <img src="src/img/todo.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30  group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white  rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30  group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white  rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+                </button>
+            </div>
+        </section>
+        
+        <section class="pt-[110px] container flex justify-center">
+           <div class="max-w-[900px]">
+               <h2 class="text-center text-[45px] font-semibold mb-[25px]">Sobre Nosotros</h2>
+               <div class="w-full flex item-center text-center gap-8">
+                   <img src="img/img.jpg" alt="Imagen sobre nosotros" class="w-[200px] text-center">
+                   <div class="flex flex-col gap-2 justify-center text-[15px] font-normal leading-[28.8px]">
+                       <p>Somos un Centro de Investigación y Publicación Científica IDEOs, nos dedicamos a la asesoría de TESIS de PreGrado, PosGrado y PhD. Adicionalmente asesoramos y desarrollamos artículos científicos, artículos de revisión, case reports y cartas al editor, en nuestras revistas indexadas en: Latindex, Scopus, WebScience, SCielo.</p>
+                       <p>Contamos con más de 25 años en el mercado de asesoría en tesis y trabajos de investigación, de universidades nacionales tales como: PUCP, Cayetano Heredia, UPC, Científica del Sur, Pacífico, U. de Lima, entre otras.</p>
+                   </div>
+               </div>
+           </div>
+        </section>
+        
+        <section class="container-2 pt-[110px]">
+            <h2 class="font-semibold text-[23px] pb-6 leading-[23px] tracking-[12px] ">Servicios</h2>
+            <!-- BLOQUE 1 -->
+            <div class="flex pb-[25px] mt-[55px] border-b">
+                <div class="flex-1">
+                    <h3 class="text-[35px] font-bold mb-[45px]">Tesis PREGRADO</h3>
+                    <p class="text-[15px] font-normal max-w-[400px] mb-[45px]">
+                        Asesoría en TESIS PREGRADO: Desarrollo del Plan o Proyecto de Tesis en 12 días. Informe Final de TESIS en 25 días.
+                    </p>
+                    <div class="flex w-full justify-center">
+                        <a
+                                href="pregrado.html"
+                                class="py-[15px] px-[30px] bg-[#525252] text-white rounded-[10px] hover:bg-[#F6520A] uppercase font-semibold"
+                        >
+                            Más Información
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <div
+                            id="accordion-flush-1"
+                            data-accordion="collapse"
+                            data-active-classes="bg-white text-gray-900"
+                            data-inactive-classes="text-gray-500"
+                    >
+                        <h2 id="accordion-flush-1-heading-1">
+                            <button
+                                    type="button"
+                                    class="cursor-pointer flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-1-body-1"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-1-body-1"
+                            >
+                                <span>Ingeniería</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-1-body-1"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-1-heading-1"
+                        >
+                            <div class="py-5 px-3 text-[15px] border-b border-gray-200">
+                                <p class="mb-4">
+                                    Somos especialistas en la asesoría y elaboración de TESIS de Ingeniería.
+                                    Ya que este tipo de TESIS son diferentes a las demás TESIS donde se aplica
+                                    un instrumento y se llega a una serie de conclusiones. Una TESIS en INGENIERIA
+                                    generalmente cuenta con un diseño, una propuesta, o una aplicación de alguna
+                                    herramienta de Ingeniería. Nuestro equipo de profesores se especializa en las
+                                    siguientes áreas de Ingeniería:
+                                </p>
+                                <ul>
+                                    <li>Ingeniería Industrial</li>
+                                    <li>Ingeniería Sistemas</li>
+                                    <li>Ingeniería Civil</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-1-heading-2">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-1-body-2"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-1-body-2"
+                            >
+                                <span>Educación</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-1-body-2"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-1-heading-2"
+                        >
+                            <div class="py-5 px-3 border-b border-gray-200">
+                                <p class="text-[15px] font-normal">
+                                    Las TESIS en Administración se caracterizan por ser transversales a todas
+                                    las áreas del conocimiento tales como: Negocios Internacionales, Marketing,
+                                    Recursos Humanos, etc. Hay ciertas reglas que recomendamos seguir al momento
+                                    de seleccionar el tema de su tesis de Administración de Empresas, como el
+                                    desarrollar una TESIS en el lugar donde trabaja, o donde realiza sus práctica
+                                    profesionales, o alguna empresa familiar. Nosotros contamos con profesores
+                                    especialistas en el área de Administración de Empresas, Marketing, Negocios
+                                    Internacionales, Recursos Humanos, etc..
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-1-heading-3">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-1-body-3"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-1-body-3"
+                            >
+                                <span>Administración</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-1-body-3"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-1-heading-3"
+                        >
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-gray-500">
+                                    The main difference is that the core components from Flowbite are open source under
+                                    the MIT license, whereas Tailwind UI is a paid product. Another difference is that
+                                    Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
+                                    sections of pages.
+                                </p>
+                                <p class="mb-2 text-gray-500">
+                                    However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind
+                                    UI as there is no technical reason stopping you from using the best of two worlds.
+                                </p>
+                                <p class="mb-2 text-gray-500">Learn more about these technologies:</p>
+                                <ul class="ps-5 text-gray-500 list-disc">
+                                    <li>
+                                        <a
+                                                href="https://flowbite.com/pro/"
+                                                class="text-blue-600 hover:underline"
+                                        >Flowbite Pro</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                                href="https://tailwindui.com/"
+                                                rel="nofollow"
+                                                class="text-blue-600 hover:underline"
+                                        >Tailwind UI</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2 -->
+            <div class="flex pb-[25px] mt-[55px] border-b">
+                <div class="flex-1">
+                    <h3 class="text-[35px] font-bold mb-[45px]">Tesis MAESTRÍA</h3>
+                    <p class="text-[15px] font-normal max-w-[400px] mb-[45px]">
+                        Asesoría en TESIS MAESTRÍA: Desarrollo del Plan de Investigación,
+                        Referencial Teórico, Instrumentos y Análisis de Resultados con Rigurosidad Académica.
+                    </p>
+                    <div class="flex w-full justify-center">
+                        <a
+                                href="maestria.html"
+                                class="py-[15px] px-[30px] bg-[#525252] text-white rounded-[10px] hover:bg-[#F6520A] uppercase font-semibold"
+                        >
+                            Más Información
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <div
+                            id="accordion-flush-2"
+                            data-accordion="collapse"
+                            data-active-classes="bg-white text-gray-900"
+                            data-inactive-classes="text-gray-500"
+                    >
+                        <h2 id="accordion-flush-2-heading-1">
+                            <button
+                                    type="button"
+                                    class="cursor-pointer flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-2-body-1"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-2-body-1"
+                            >
+                                <span>Educación</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-2-body-1"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-2-heading-1"
+                        >
+                            <div class="py-5 px-3 text-[15px] border-b border-gray-200">
+                                <p class="mb-4">
+                                    En maestrías de Educación, profundizamos en metodologías de enseñanza,
+                                    currículos basados en competencias y evaluación de aprendizajes con
+                                    instrumentos válidos y confiables.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-2-heading-2">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-2-body-2"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-2-body-2"
+                            >
+                                <span>Psicología</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-2-body-2"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-2-heading-2"
+                        >
+                            <div class="py-5 px-3 border-b border-gray-200">
+                                <p class="text-[15px] font-normal">
+                                    Las TESIS en Psicología requieren un especial cuidado en la elección
+                                    de pruebas psicológicas, correlaciones y diseños experimentales para
+                                    validar hipótesis sobre conductas humanas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-2-heading-3">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-2-body-3"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-2-body-3"
+                            >
+                                <span>Ciencias de la Salud</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-2-body-3"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-2-heading-3"
+                        >
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-gray-500">
+                                    En postgrados de Salud, se hace énfasis en la revisión bibliográfica
+                                    exhaustiva, manejo de variables clínicas y rigurosidad en el análisis
+                                    estadístico para obtener conclusiones válidas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3 -->
+            <div class="flex pb-[25px] mt-[55px] border-b">
+                <div class="flex-1">
+                    <h3 class="text-[35px] font-bold mb-[45px]">Tesis DOCTORAL</h3>
+                    <p class="text-[15px] font-normal max-w-[400px] mb-[45px]">
+                        Asesoría especializada en TESIS DOCTORAL: Análisis profundo, uso de métodos
+                        estadísticos avanzados y desarrollo de aportes originales al conocimiento
+                        científico.
+                    </p>
+                    <div class="flex w-full justify-center">
+                        <a
+                                href="doctoral.html"
+                                class="py-[15px] px-[30px] bg-[#525252] text-white rounded-[10px] hover:bg-[#F6520A] uppercase font-semibold"
+                        >
+                            Más Información
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <div
+                            id="accordion-flush-3"
+                            data-accordion="collapse"
+                            data-active-classes="bg-white text-gray-900"
+                            data-inactive-classes="text-gray-500"
+                    >
+                        <h2 id="accordion-flush-3-heading-1">
+                            <button
+                                    type="button"
+                                    class="cursor-pointer flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-3-body-1"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-3-body-1"
+                            >
+                                <span>Investigación Cuantitativa</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-3-body-1"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-3-heading-1"
+                        >
+                            <div class="py-5 px-3 text-[15px] border-b border-gray-200">
+                                <p class="mb-4">
+                                    Dominio en pruebas estadísticas complejas como ANOVA multivariado,
+                                    regresiones logísticas, modelado estructural, entre otras metodologías
+                                    de análisis avanzado.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-3-heading-2">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-3-body-2"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-3-body-2"
+                            >
+                                <span>Investigación Cualitativa</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-3-body-2"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-3-heading-2"
+                        >
+                            <div class="py-5 px-3 border-b border-gray-200">
+                                <p class="text-[15px] font-normal">
+                                    Análisis profundo a partir de entrevistas, grupos focales, estudios
+                                    fenomenológicos o etnográficos, con codificación y triangulación de datos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-3-heading-3">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-3-body-3"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-3-body-3"
+                            >
+                                <span>Publicación Científica</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-3-body-3"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-3-heading-3"
+                        >
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-gray-500">
+                                    Asesoría para postular artículos a revistas indexadas, cumpliendo
+                                    estándares de originalidad, formato y rigor académico de alto impacto.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 4 -->
+            <div class="flex pb-[25px] mt-[55px] border-b">
+                <div class="flex-1">
+                    <h3 class="text-[35px] font-bold mb-[45px]">Tesis ABOGACÍA</h3>
+                    <p class="text-[15px] font-normal max-w-[400px] mb-[45px]">
+                        Asesoría en TESIS de Derecho/Abogacía: Enfoque práctico sobre casos, doctrinas
+                        legales, jurisprudencia, y aplicación de la norma a realidades concretas.
+                    </p>
+                    <div class="flex w-full justify-center">
+                        <a
+                                href="abogacia.html"
+                                class="py-[15px] px-[30px] bg-[#525252] text-white rounded-[10px] hover:bg-[#F6520A] uppercase font-semibold"
+                        >
+                            Más Información
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <div
+                            id="accordion-flush-4"
+                            data-accordion="collapse"
+                            data-active-classes="bg-white text-gray-900"
+                            data-inactive-classes="text-gray-500"
+                    >
+                        <h2 id="accordion-flush-4-heading-1">
+                            <button
+                                    type="button"
+                                    class="cursor-pointer flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-4-body-1"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-4-body-1"
+                            >
+                                <span>Derecho Penal</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-4-body-1"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-4-heading-1"
+                        >
+                            <div class="py-5 px-3 text-[15px] border-b border-gray-200">
+                                <p class="mb-4">
+                                    Abordamos la tesitura legal, doctrinal y jurisprudencial en el ámbito
+                                    penal, permitiendo una investigación sólida con base en la teoría del
+                                    delito y derecho comparado.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-4-heading-2">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-4-body-2"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-4-body-2"
+                            >
+                                <span>Derecho Civil</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-4-body-2"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-4-heading-2"
+                        >
+                            <div class="py-5 px-3 border-b border-gray-200">
+                                <p class="text-[15px] font-normal">
+                                    Nos enfocamos en contratos, sucesiones, familia y propiedad,
+                                    resaltando la importancia de la jurisprudencia nacional e internacional
+                                    en la construcción de la Tesis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-4-heading-3">
+                            <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full py-5 font-medium text-gray-500 border-b border-gray-200 gap-3"
+                                    data-accordion-target="#accordion-flush-4-body-3"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-flush-4-body-3"
+                            >
+                                <span>Derecho Constitucional</span>
+                                <svg
+                                        data-accordion-icon
+                                        class="w-3 h-3 rotate-180 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                >
+                                    <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5 5 1 1 5"
+                                    />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                                id="accordion-flush-4-body-3"
+                                class="hidden"
+                                aria-labelledby="accordion-flush-4-heading-3"
+                        >
+                            <div class="py-5 border-b border-gray-200">
+                                <p class="mb-2 text-gray-500">
+                                    Orientado a la tutela de derechos fundamentales, la interpretación
+                                    constitucional y el estudio de las tensiones entre poder público y
+                                    garantías individuales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 5 -->
+            <div class="flex pb-[25px] mt-[55px] border-b">
+                <div class="flex-1">
+                    <h3 class="text-[35px] font-bold mb-[45px]">Publicación de Artículos Científicos</h3>
+                    <p class="text-[15px] font-normal mb-[45px]">
+                        Nuestro Centro de investigación se preocupa por la producción científica de los profesores, ayudando a publicar en revistas indexadas.
+                    </p>
+                    <div class="flex w-full justify-center">
+                        <a
+                                href="articulos.html"
+                                class="py-[15px] px-[30px] bg-[#525252] text-white rounded-[10px] hover:bg-[#F6520A] uppercase font-semibold"
+                        >
+                            Más Información
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-[110px] ">
+        <div class="bg-[#1D1C1F] py-[41px] text-white">
+            <div class="container grid grid-cols-4 text-[13px] font-normal">
+                <div>
+                    <h3 class="text-[18px] mb-[17px]">Servicios</h3>
+                    <nav class="flex flex-col gap-[13px]">
+                        <a href="#" class="hover:text-[#F6520A]">Tesis Doctoral</a>
+                        <a href="#" class="hover:text-[#F6520A]">Tesis Maestría</a>
+                        <a href="#" class="hover:text-[#F6520A]">Tesis Pregrado</a>
+                        <a href="#" class="hover:text-[#F6520A]">Reduccion de Similitud – Turnitin</a>
+                        <a href="#" class="hover:text-[#F6520A]">Publicacion de Articulos Cientificos</a>
+                        <a href="#" class="hover:text-[#F6520A]">Conviértete en Investigador Renacyt</a>
+                        <a href="#" class="hover:text-[#F6520A]">Elaboración y publicación de artículos científicos</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-[18px] mb-[17px]">Links</h3>
+                    <nav class="flex flex-col gap-[13px]">
+                        <a href="#" class="hover:text-[#F6520A]">Inicio</a>
+                        <a href="#" class="hover:text-[#F6520A]">Sobre Nosotros</a>
+                        <a href="#" class="hover:text-[#F6520A]">Servicios</a>
+                        <a href="#" class="hover:text-[#F6520A]">Artículos</a>
+                        <a href="#" class="hover:text-[#F6520A]">Contacto</a>
+                    </nav>
+                </div>
+                <div class="flex flex-col gap-[42px]">
+                    <div class="flex flex-col gap-[17px]">
+                        <h4 class="text-[16px] ">Sede Lima</h4>
+                        <p class="max-w-[200px]"><strong>Dirección</strong>: Calle Teruel 292, Miraflores, Lima - Perú</p>
+                        <p><strong>Fono</strong>: <span class="text-[#F6520A]">+51 1 4222119 - 996838533</span></p>
+                    </div>
+                    <div class="flex flex-col gap-[17px]">
+                        <h4 class="text-[16px] ">Sede Miami</h4>
+                        <p class="max-w-[200px]"><strong>Dirección</strong>: Calle Teruel 292, Miraflores, Lima - Perú</p>
+                        <p><strong>Fono</strong>: <span class="text-[#F6520A]">+51 1 4222119 - 996838533</span></p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sede Ecuador</h4>
+                    <p class="max-w-[200px]"><strong>Dirección</strong>: v. Las Monjas 129 y Víctor Emilio Estrada, Guayaquil</p>
+                    <p><strong>Fono</strong>: <span class="text-[#F6520A]">+51 1 4222119</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center bg-[#F6520A] py-[15px] text-white text-[15px] font-normal">
+            <p>&copy; 2025 Asesoría en Tesis - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+
+    <script src="src/js/app.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
