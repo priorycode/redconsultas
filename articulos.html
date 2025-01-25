@@ -3,43 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artículos Científicos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Artículos</title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06610a6ec1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">TESIS</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                <li>
-                    <a href="#">Servicios</a>
-                    <ul class="dropdown">
-                        <li><a href="pregrado.html">Tesis Pregrado</a></li>
-                        <li><a href="maestria.html">Tesis Maestría</a></li>
-                        <li><a href="doctoral.html">Tesis Doctoral</a></li>
-                    </ul>
-                </li>
-                <li><a href="articulos.html">Artículos Científicos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="publications">
-            <h2>Artículos Científicos</h2>
-            <p>Brindamos asistencia para la publicación de artículos científicos en revistas indexadas. Contamos con servicios de revisión, formato y traducción.</p>
-            <div class="categories">
-                <button>Originales</button>
-                <button>De Revisión</button>
-                <button>Case Report</button>
+        <!-- Top Bar  -->
+        <section class="bg-black">
+            <div class="container flex flex-col md:flex-row items-center gap-[27px] text-white justify-end">
+                <div class="py-[10px] flex justify-center flex-col md:flex-row items-center gap-4">
+                    <div class="flex flex-col justify-center md:flex-row items-center gap-4">
+                        <a href="#" class="flex justify-center gap-2 text-[12px] md:text-[15px]">
+                            <i data-lucide="phone" class="w-[18px] h-[18px]"></i>
+                            <span> 996838533</span>
+                        </a>
+                        <a href="#" class="flex justify-center items-center gap-2 text-[12px] md:text-[15px]">
+                            <i data-lucide="mail" class="w-[18px] h-[18px]"></i>
+                            <span> informes@asesoriaentesis.edu.pe</span>
+                        </a>
+                    </div>
+                    <div class="flex justify-center items-center gap-2 ">
+                        <a href="#" class="flex items-center">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="flex items-center">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-[#F6520A] text-center text-[14px] md:text-[18px] py-[10px] px-6">
+                    <span class="uppercase">ruc: 20606452153</span>
+                </div>
             </div>
-            <div class="videos">
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/example1" title="Video 1"></iframe>
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/example2" title="Video 2"></iframe>
+        </section>
+    
+        <!-- Header -->
+        <section class="container relative py-[32px] flex justify-between items-center">
+            <div class="text-[30px]">TESIS</div>
+            <nav class="hidden md:flex items-center z-50 text-[14px] uppercase">
+                <a href="index.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white transition-colors">Inicio</a>
+                <a href="nosotros.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white transition-colors">Sobre Nosotros</a>
+                <div class="relative group">
+                    <button class="dropdown-action py-4 px-6 hover:bg-[#F6520A] hover:text-white flex items-center gap-2 transition-colors">
+                        Servicios
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu opacity-0 invisible transition-opacity duration-300 absolute top-full left-0 flex flex-col bg-gray-700 text-white w-48">
+                        <a href="pregrado.html" class="py-2 px-4 hover:bg-gray-600 transition-colors">Tesis Pregrado</a>
+                        <a href="maestria.html" class="py-2 px-4 hover:bg-gray-600 transition-colors">Tesis Maestría</a>
+                        <a href="doctoral.html" class="py-2 px-4 hover:bg-gray-600 transition-colors">Tesis Doctoral</a>
+                    </div>
+                </div>
+                <a href="articulos.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white transition-colors">Artículos Científicos</a>
+                <a href="contacto.html" class="py-4 px-6 hover:bg-[#F6520A] hover:text-white transition-colors">Contacto</a>
+            </nav>
+            <button class="md:hidden flex items-center text-black" id="mobile-menu-button">
+                <i data-lucide="menu"></i>
+            </button>
+            <button class="uppercase bg-black py-[9px] px-[15px] text-[14px] rounded-full font-bold cursor-pointer hover:bg-[#F6520A] text-white hidden md:block transition-colors">Centro de Investigación IDEOs</button>
+    
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-black text-white flex flex-col z-50">
+                <a href="index.html" class="py-4 px-6 hover:bg-[#F6520A] transition-colors">Inicio</a>
+                <a href="nosotros.html" class="py-4 px-6 hover:bg-[#F6520A] transition-colors">Sobre Nosotros</a>
+                <div class="relative">
+                    <button class="w-full text-left py-4 px-6 hover:bg-[#F6520A] flex justify-between items-center transition-colors" id="mobile-servicios-button">
+                        Servicios
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="submenu hidden flex flex-col bg-gray-700">
+                        <a href="pregrado.html" class="py-2 px-6 hover:bg-gray-600 transition-colors">Tesis Pregrado</a>
+                        <a href="maestria.html" class="py-2 px-6 hover:bg-gray-600 transition-colors">Tesis Maestría</a>
+                        <a href="doctoral.html" class="py-2 px-6 hover:bg-gray-600 transition-colors">Tesis Doctoral</a>
+                    </div>
+                </div>
+                <a href="articulos.html" class="py-4 px-6 hover:bg-[#F6520A] transition-colors">Artículos Científicos</a>
+                <a href="contacto.html" class="py-4 px-6 hover:bg-[#F6520A] transition-colors">Contacto</a>
+                <button class="uppercase bg-black py-3 px-6 text-[14px] rounded-full font-bold cursor-pointer hover:bg-[#F6520A] text-white mx-6 transition-colors">Centro de Investigación IDEOs</button>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section class=" h-[200px]  md:h-[350px] relative  hero-articulo flex items-center justify-center">
+            
+            <h1 class="text-[28px] md:text-[48px] h-fit font-medium text-white z-20">Artículos Científicos</h1>
+            <div class="bg-black-light absolute w-full h-full">
+                
+            </div>
+        </section>
+
+        <section class="container ">
+            
+            <p class="mt-6 text-center md:text-left text-[15px] text-[#676767] mb-6">Brindamos asistencia para la publicación de artículos científicos en revistas indexadas. Contamos con servicios de revisión, formato y traducción.</p>
+            
+            <div class="mb-6 flex flex-col md:flex-row justify-center gap-[15px] md:gap-[30px]">
+                <button class="py-2 px-4 bg-amber-500 uppercase text-white rounded-2xl cursor-pointer">Originales</button>
+                <button class="py-2 px-4 bg-amber-500 uppercase text-white rounded-2xl cursor-pointer">De Revisión</button>
+                <button class="py-2 px-4 bg-amber-500 uppercase text-white rounded-2xl cursor-pointer">Case Report</button>
+            </div>
+
+            <div class="w-full">
+                <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/9liH9GksQok?si=1fHYUsAzDofdk7XC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
     </main>
+
+
+    <footer class="mt-[110px] ">
+        <div class="bg-[#1D1C1F] py-[41px] text-white">
+            <div class="container grid grid-cols-4 text-[13px] font-normal">
+                <div>
+                    <h3 class="text-[18px] mb-[17px]">Servicios</h3>
+                    <nav class="flex flex-col gap-[13px]">
+                        <a href="#" class="hover:text-[#F6520A]">Tesis Doctoral</a>
+                        <a href="#" class="hover:text-[#F6520A]">Tesis Maestría</a>
+                        <a href="#" class="hover:text-[#F6520A]">Tesis Pregrado</a>
+                        <a href="#" class="hover:text-[#F6520A]">Reduccion de Similitud – Turnitin</a>
+                        <a href="#" class="hover:text-[#F6520A]">Publicacion de Articulos Cientificos</a>
+                        <a href="#" class="hover:text-[#F6520A]">Conviértete en Investigador Renacyt</a>
+                        <a href="#" class="hover:text-[#F6520A]">Elaboración y publicación de artículos científicos</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-[18px] mb-[17px]">Links</h3>
+                    <nav class="flex flex-col gap-[13px]">
+                        <a href="#" class="hover:text-[#F6520A]">Inicio</a>
+                        <a href="#" class="hover:text-[#F6520A]">Sobre Nosotros</a>
+                        <a href="#" class="hover:text-[#F6520A]">Servicios</a>
+                        <a href="#" class="hover:text-[#F6520A]">Artículos</a>
+                        <a href="#" class="hover:text-[#F6520A]">Contacto</a>
+                    </nav>
+                </div>
+                <div class="flex flex-col gap-[42px]">
+                    <div class="flex flex-col gap-[17px]">
+                        <h4 class="text-[16px] ">Sede Lima</h4>
+                        <p class="max-w-[200px]"><strong>Dirección</strong>: Calle Teruel 292, Miraflores, Lima - Perú</p>
+                        <p><strong>Fono</strong>: <span class="text-[#F6520A]">+51 1 4222119 - 996838533</span></p>
+                    </div>
+                    <div class="flex flex-col gap-[17px]">
+                        <h4 class="text-[16px] ">Sede Miami</h4>
+                        <p class="max-w-[200px]"><strong>Dirección</strong>: Calle Teruel 292, Miraflores, Lima - Perú</p>
+                        <p><strong>Fono</strong>: <span class="text-[#F6520A]">+51 1 4222119 - 996838533</span></p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sede Ecuador</h4>
+                    <p class="max-w-[200px]"><strong>Dirección</strong>: v. Las Monjas 129 y Víctor Emilio Estrada, Guayaquil</p>
+                    <p><strong>Fono</strong>: <span class="text-[#F6520A]">+51 1 4222119</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center bg-[#F6520A] py-[15px] text-white text-[15px] font-normal">
+            <p>&copy; 2025 Asesoría en Tesis - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="src/js/app.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

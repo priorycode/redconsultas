@@ -10,6 +10,20 @@
     margin: auto;
 }
 
+.hero-about{
+    background: url('https://images.pexels.com/photos/7942516/pexels-photo-7942516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-articulo{
+    background:url("/src/img/articulo.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
