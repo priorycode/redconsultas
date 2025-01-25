@@ -1,104 +1,107 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Dropdown Menu for Desktop with Smooth Transition
+    const dropdownAction = document.querySelector(".dropdown-action");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
 
-const dropdownAction = document.querySelector(".dropdown-action");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+    if (dropdownAction && dropdownMenu) {
+        const showDropdown = () => {
+            dropdownMenu.classList.remove("opacity-0", "invisible");
+            dropdownMenu.classList.add("opacity-100", "visible");
+            dropdownAction.classList.add("bg-[#F6520A]", "text-white");
+        };
 
-// Mostrar el menú cuando el mouse entra en el botón
-dropdownAction.addEventListener("mouseenter", () => {
-    dropdownMenu.classList.remove("hidden");
-    dropdownAction.classList.add("bg-[#F6520A]");
-    dropdownAction.classList.add("text-white");
-});
+        const hideDropdown = () => {
+            dropdownMenu.classList.remove("opacity-100", "visible");
+            dropdownMenu.classList.add("opacity-0", "invisible");
+            dropdownAction.classList.remove("bg-[#F6520A]", "text-white");
+        };
 
-// Ocultar el menú solo si el mouse no está sobre el menú ni sobre el botón
-dropdownAction.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-        if (!dropdownMenu.matches(':hover') && !dropdownAction.matches(':hover')) {
-            dropdownMenu.classList.add("hidden");
-            dropdownAction.classList.remove("bg-[#F6520A]");
-            dropdownAction.classList.remove("text-white");
-        }
-    }, 100); // Pequeño retraso para evitar comportamientos bruscos
-});
+        dropdownAction.addEventListener("mouseenter", showDropdown);
+        dropdownAction.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+                if (!dropdownMenu.matches(':hover') && !dropdownAction.matches(':hover')) {
+                    hideDropdown();
+                }
+            }, 100);
+        });
 
-// Evitar que se oculte si el mouse entra al menú
-dropdownMenu.addEventListener("mouseenter", () => {
-    dropdownMenu.classList.remove("hidden");
-    dropdownAction.classList.add("bg-[#F6520A]");
-    dropdownAction.classList.add("text-white");
-});
+        dropdownMenu.addEventListener("mouseenter", showDropdown);
+        dropdownMenu.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+                if (!dropdownMenu.matches(':hover') && !dropdownAction.matches(':hover')) {
+                    hideDropdown();
+                }
+            }, 100);
+        });
+    }
 
-// Ocultar el menú cuando el mouse sale del menú y del botón
-dropdownMenu.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-        if (!dropdownMenu.matches(':hover') && !dropdownAction.matches(':hover')) {
-            dropdownMenu.classList.add("hidden");
-            dropdownAction.classList.remove("bg-[#F6520A]");
-            dropdownAction.classList.remove("text-white");
-        }
-    }, 100); // Pequeño retraso para asegurarse
-});
-
-//==== CAROUSEL  ====//
-document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector("#controls-carousel");
+    // CAROUSEL //
+    const carousel = document.getElementById("controls-carousel");
     const items = carousel.querySelectorAll("[data-carousel-item]");
     const prevButton = carousel.querySelector("[data-carousel-prev]");
     const nextButton = carousel.querySelector("[data-carousel-next]");
 
     let currentIndex = 0;
-    const intervalTime = 3000;
+    const intervalTime = 3000; // 3 seconds
     let autoSlideInterval;
 
-    function showSlide(newIndex) {
-        if (newIndex === currentIndex) return;
-        const oldIndex = currentIndex;
+    const totalItems = items.length;
+
+    // Initialize carousel
+    const initCarousel = () => {
+        items.forEach((item, index) => {
+            if (index === 0) {
+                item.classList.add("opacity-100");
+                item.classList.remove("opacity-0");
+            } else {
+                item.classList.add("opacity-0");
+                item.classList.remove("opacity-100");
+            }
+        });
+        startAutoSlide();
+    };
+
+    // Show slide based on index
+    const showSlide = (newIndex) => {
+        if (newIndex === currentIndex || newIndex < 0 || newIndex >= totalItems) return;
+
+        const currentItem = items[currentIndex];
+        const nextItem = items[newIndex];
+
+        // Fade out current slide
+        currentItem.classList.remove("opacity-100");
+        currentItem.classList.add("opacity-0");
+
+        // Fade in next slide
+        nextItem.classList.remove("opacity-0");
+        nextItem.classList.add("opacity-100");
+
         currentIndex = newIndex;
+    };
 
-        // Desvanece la diapositiva anterior
-        items[oldIndex].classList.remove("fade-in");
-        items[oldIndex].classList.add("fade-out");
-        setTimeout(() => {
-            items[oldIndex].classList.add("hidden", "opacity-0");
-            items[oldIndex].classList.remove("block", "fade-out");
-        }, 700);
-
-        // Muestra la nueva diapositiva con fade-in
-        items[newIndex].classList.remove("hidden", "opacity-0", "fade-out");
-        items[newIndex].classList.add("block", "fade-in");
-        setTimeout(() => {
-            items[newIndex].classList.remove("fade-in");
-        }, 700);
-    }
-
-    function nextSlide() {
-        const newIndex = (currentIndex + 1) % items.length;
+    // Show next slide
+    const nextSlide = () => {
+        const newIndex = (currentIndex + 1) % totalItems;
         showSlide(newIndex);
-    }
+    };
 
-    function prevSlide() {
-        const newIndex = (currentIndex - 1 + items.length) % items.length;
+    // Show previous slide
+    const prevSlide = () => {
+        const newIndex = (currentIndex - 1 + totalItems) % totalItems;
         showSlide(newIndex);
-    }
+    };
 
-    function startAutoSlide() {
+    // Start automatic sliding
+    const startAutoSlide = () => {
         autoSlideInterval = setInterval(nextSlide, intervalTime);
-    }
+    };
 
-    function stopAutoSlide() {
+    // Stop automatic sliding
+    const stopAutoSlide = () => {
         clearInterval(autoSlideInterval);
-    }
+    };
 
-    items.forEach((item, i) => {
-        if (i === 0) {
-            item.classList.remove("hidden", "opacity-0");
-            item.classList.add("block");
-        } else {
-            item.classList.add("hidden", "opacity-0");
-        }
-    });
-
-    startAutoSlide();
-
+    // Event listeners for navigation buttons
     prevButton.addEventListener("click", () => {
         stopAutoSlide();
         prevSlide();
@@ -111,30 +114,32 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoSlide();
     });
 
+    // Pause auto sliding on mouse enter
     carousel.addEventListener("mouseenter", stopAutoSlide);
+
+    // Resume auto sliding on mouse leave
     carousel.addEventListener("mouseleave", startAutoSlide);
-});
 
-//==== ACORDEON  ====//
-document.addEventListener("DOMContentLoaded", () => {
+    // Initialize the carousel on page load
+    initCarousel();
+
+    // Accordion
     const triggers = document.querySelectorAll("[data-accordion-target]");
-
     triggers.forEach((trigger) => {
         const targetSelector = trigger.getAttribute("data-accordion-target");
         const target = document.querySelector(targetSelector);
         const icon = trigger.querySelector("[data-accordion-icon]");
 
-        // Quita "hidden" para permitir transición (Tailwind suele usar "hidden" por defecto).
-        // Ajustamos estilos para animar altura y opacidad.
+        if (!target) return;
+
         target.classList.remove("hidden");
         target.style.overflow = "hidden";
         target.style.transition = "max-height 0.3s ease, opacity 0.3s ease";
 
-        // Estado inicial: abierto o cerrado según "aria-expanded"
         const isExpanded = trigger.getAttribute("aria-expanded") === "true";
         if (isExpanded) {
             icon?.classList.add("rotate-180");
-            target.style.maxHeight = target.scrollHeight + "px";
+            target.style.maxHeight = `${target.scrollHeight}px`;
             target.style.opacity = "1";
         } else {
             icon?.classList.remove("rotate-180");
@@ -142,22 +147,40 @@ document.addEventListener("DOMContentLoaded", () => {
             target.style.opacity = "0";
         }
 
-        // Al hacer click, expandir o colapsar
         trigger.addEventListener("click", () => {
             const currentlyExpanded = trigger.getAttribute("aria-expanded") === "true";
+            const newState = !currentlyExpanded;
 
-            if (currentlyExpanded) {
-                trigger.setAttribute("aria-expanded", "false");
-                icon?.classList.remove("rotate-180");
-                target.style.maxHeight = "0";
-                target.style.opacity = "0";
-            } else {
-                trigger.setAttribute("aria-expanded", "true");
-                icon?.classList.add("rotate-180");
-                target.style.maxHeight = target.scrollHeight + "px";
-                target.style.opacity = "1";
-            }
+            trigger.setAttribute("aria-expanded", newState);
+            icon?.classList.toggle("rotate-180", newState);
+            target.style.maxHeight = newState ? `${target.scrollHeight}px` : "0";
+            target.style.opacity = newState ? "1" : "0";
         });
     });
-});
 
+    // Mobile Menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileServiciosButton = document.getElementById('mobile-servicios-button');
+    const mobileSubmenu = mobileServiciosButton?.nextElementSibling;
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    if (mobileServiciosButton && mobileSubmenu) {
+        mobileServiciosButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileSubmenu.classList.toggle('hidden');
+        });
+    }
+
+    document.addEventListener('click', (event) => {
+        if (mobileMenu && !mobileMenu.contains(event.target) && mobileMenuButton && !mobileMenuButton.contains(event.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+});
